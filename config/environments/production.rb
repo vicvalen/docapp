@@ -76,4 +76,15 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #Paperclic Amazon S3
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => 'onixmediaimages',
+    :access_key_id => 'AKIAJHTDANPCGOYXD2GA',
+    :secret_access_key => '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'
+  }
+}
 end
