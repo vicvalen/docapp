@@ -85,9 +85,9 @@ Rails.application.configure do
   :storage => :s3,
   :s3_region => "us-west-2", 
   :s3_credentials => {
-    :bucket => 'onixmediadesign',
-    :access_key_id => "AKIAJHTDANPCGOYXD2GA",
-    :secret_access_key => "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"
+    :bucket => ENV['onixmediadesign'],
+    :access_key_id => ENV['AKIAJHTDANPCGOYXD2GA'],
+    :secret_access_key => ENV['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']
   }
 }
 end
