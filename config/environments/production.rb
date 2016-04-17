@@ -78,11 +78,12 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #Paperclic Amazon S3
-
+a
   
 
   config.paperclip_defaults = {
   :storage => :s3,
+  :s3_region => "S3-us-west-2.amazonaws.com", 
   :s3_credentials => {
     :bucket => 'onixmediadesign',
     :access_key_id => "AKIAJHTDANPCGOYXD2GA",
