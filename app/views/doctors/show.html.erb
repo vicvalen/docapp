@@ -1,0 +1,52 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+  	<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <%= image_tag @doctor.image.url(:medium) %>
+    </a>
+  </div>
+  <div class="row">
+  <div class="col-xs-6 col-md-5">
+
+    <ul class="list-group">
+      <li class="list-group-item"><h4><%= @doctor.name %></h4></li>
+      <li class="list-group-item"><strong>Website: </strong><%= @doctor.website %></li>
+      <li class="list-group-item"><strong>Phone: </strong> <%= @doctor.phone %></li>
+      <li class="list-group-item"> <strong>Title: </strong><%= @doctor.title %></li>
+    </ul>
+   <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+   <%= link_to 'Back', doctors_path %>
+  </div>
+  <div class="row">
+  <div class="col-xs-6 col-md-4">
+    
+  </div>
+</div>
+    
+
+    
+
+</div>
+
+
+  </div>
+</div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  	<div class="row">
+<h3 style="text-align:center;">Overview</h3>
+<% @doctor.tasks.each do |t| %>
+<div class="container">
+	<ul>
+<li><%= t.description %> </li>
+    </ul>
+</div>
+<% end %>
+
+  	</div>
+  </div>
+</div>
