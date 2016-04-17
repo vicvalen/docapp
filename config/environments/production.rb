@@ -88,6 +88,9 @@ Rails.application.configure do
     :bucket => "omdrailsbucket",
     :access_key_id => "AKIAJHTDANPCGOYXD2GA",
     :secret_access_key => "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"
-  }
+  },
+    :url =>':s3_domain_url',
+    :path => '/:class/:attachment/:id_partition/:style/:filename',
+}
 }
 end
