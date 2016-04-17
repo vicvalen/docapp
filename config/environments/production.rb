@@ -83,7 +83,6 @@ Rails.application.configure do
 
   config.paperclip_defaults = {
   :storage => :s3,
-  :s3_region => 'us-west-2', 
   :s3_credentials => {
     :bucket => 'onixmediadesign',
     :access_key_id => "AKIAJHTDANPCGOYXD2GA",
