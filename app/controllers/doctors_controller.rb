@@ -1,5 +1,6 @@
 class DoctorsController < ApplicationController
   before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:show, :index]
 
   # GET /doctors
   # GET /doctors.json
@@ -25,7 +26,7 @@ class DoctorsController < ApplicationController
   # POST /doctors.json
   def create
     @doctor = Doctor.new(doctor_params)
-
+    
     respond_to do |format|
       if @doctor.save
         format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }

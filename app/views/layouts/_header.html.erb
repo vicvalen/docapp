@@ -7,10 +7,16 @@
   <li role="presentation" class="active"><%= link_to 'Home', root_path %></li>
   <li role="presentation"><a href="#">About</a></li>
   <li role="presentation"><a href="#">Find a Doctor</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><%= link_to 'Log In', new_user_session_path %></li>
-  <li role="presentation"><a href="#">Contact</a></li>
+  
+<% if user_signed_in? %>  
+  <li role="presentation"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
   <li role="presentation"><%= link_to 'New Doctor', new_doctor_path %></li>
+  <% else %>
+  <li role="presentation"><%= link_to 'Register', new_user_registration_path %></li>
+  <li role="presentation"><%= link_to 'Log In', new_user_session_path %></li>
+
+  <% end %> 
+  
     </ul>
   </div>
    </div>
