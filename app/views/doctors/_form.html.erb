@@ -1,3 +1,4 @@
+<div class="container">
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="row">
@@ -71,9 +72,9 @@
      <%= render 'task_fields', f: task %>
   <% end %>
   <div class="links">
-      <%= link_to_add_association 'add task', f, :tasks %>
+      <%= link_to_add_association 'add task', f, :tasks, class:"btn btn-default" %>
 
  <% end %>
  </div>
 </div>
-
+</div>
