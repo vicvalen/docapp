@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415232759) do
+ActiveRecord::Schema.define(version: 20160420091855) do
 
   create_table "doctors", force: :cascade do |t|
     t.string   "name"
@@ -25,6 +25,24 @@ ActiveRecord::Schema.define(version: 20160415232759) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  create_table "procedures", force: :cascade do |t|
+    t.string   "type"
+    t.integer  "doctor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "procedures", ["doctor_id"], name: "index_procedures_on_doctor_id"
+
+  create_table "resumes", force: :cascade do |t|
+    t.text     "experience"
+    t.integer  "doctor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "resumes", ["doctor_id"], name: "index_resumes_on_doctor_id"
 
   create_table "tasks", force: :cascade do |t|
     t.text     "description"

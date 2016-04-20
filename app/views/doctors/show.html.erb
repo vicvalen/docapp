@@ -39,16 +39,65 @@
 <div class="panel panel-default">
   <div class="panel-body">
   	<div class="row">
-<h3 style="text-align:center;">Overview</h3>
-<% @doctor.tasks.each do |t| %>
+      <div class="color-box">
+<h3 style="text-align:center;">Doctor Resume</h3>
+      </div>
+
 <div class="container">
-	<ul>
-<li><%= t.description %> </li>
-    </ul>
+  <div class="row">
+  <div class="col-md-2" style="text-align:center;"><strong>Resumen Curricular</strong></div>
+  <div class="col-md-4">
+  <% @doctor.tasks.each do |t| %>
+  <li><%= t.description %></li>
+  <% end %>
 </div>
-<% end %>
+
+
+
+</div>
+
 
   	</div>
+  </div>
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-2"><strong>Procedures</strong></div>
+  <div class="col-md-4">
+  <% @doctor.procedures.each do |t| %>
+  <li><%= t.type %></li>
+  <% end %>
+  </div>
+ </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-2"><strong>Experience</strong></div>
+  <div class="col-md-4">
+  <% @doctor.resumes.each do |t| %>
+  <li><%= t.experience %></li>
+  <% end %>
+  </div>
+ </div>
+
+
+    </div>
   </div>
 </div>
 </div>

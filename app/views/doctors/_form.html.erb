@@ -64,9 +64,21 @@
 </div>
 </div>
 
+
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+
+<div class="container">
+  <div class="row">
+
+  <div class="col-md-2"><strong>Cedula Profesional</strong></div>
 <%= simple_form_for(@doctor, html: { class: 'form-horizontal' }) do |f| %>
 
-  <h3> Tasks </h3>
+<h3> Experience </h3>
+
   <div id="tasks" >
    <%= f.fields_for :tasks do |task| %>
      <%= render 'task_fields', f: task %>
@@ -77,4 +89,74 @@
  <% end %>
  </div>
 </div>
+  </div>
+ </div>
+
+
+    </div>
+  </div>
 </div>
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-2"><strong>Procedures</strong></div>
+    
+ <%= simple_form_for(@doctor, html: { class: 'form-horizontal' }) do |f| %>
+
+  <h3> Procedures </h3>
+  <div id="procedures" >
+   <%= f.fields_for :procedures do |procedure| %>
+     <%= render 'procedure_fields', f: procedure %>
+  <% end %>
+  <div class="links">
+   <%= link_to_add_association 'add procedure', f, :procedures, class:"btn btn-default" %>
+
+ <% end %>
+ </div>
+</div>
+  </div>
+ </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-2"><strong>Experience</strong></div>
+    
+ <%= simple_form_for(@doctor, html: { class: 'form-horizontal' }) do |f| %>
+
+  <h3> Resume </h3>
+  <div id="resume" >
+   <%= f.fields_for :resumes do |resume| %>
+     <%= render 'resume_fields', f: resume %>
+  <% end %>
+  <div class="links">
+   <%= link_to_add_association 'add resume', f, :resumes, class:"btn btn-default" %>
+
+ <% end %>
+ </div>
+</div>
+  </div>
+ </div>
+
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
