@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-gem 'puma'
-gem 'simple_form'
 gem 'sqlite3'
+gem 'simple_form'
+gem 'puma'
 gem "paperclip", "~> 5.0.0.beta1"
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -32,3 +32,8 @@ group :development do
   
   gem 'spring'
 end
+
+group :production do
+  gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+ end
