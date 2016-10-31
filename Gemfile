@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-gem 'sqlite3'
+ gem 'pg',             '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+   gem 'sqlite3'
 gem 'puma'
 
 gem 'simple_form'
@@ -31,6 +33,7 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
- 
+  gem 'sqlite3'
   gem 'spring'
 end
+
