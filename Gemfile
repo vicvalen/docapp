@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'sqlite3'
+
 gem 'simple_form'
 gem 'puma'
 gem "paperclip", "~> 5.0.0.beta1"
@@ -29,7 +29,7 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  
+  gem 'sqlite3'
   gem 'spring'
 end
 
