@@ -33,7 +33,7 @@ Rails.application.configure do
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
-  config.assets.digest = false
+  config.assets.digest = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -81,5 +81,14 @@ Rails.application.configure do
 
   
 
-  
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_region => "us-west-2", 
+  :s3_host_name => 's3-us-west-2.amazonaws.com',
+  :s3_credentials => {
+    :bucket => "omdrailsbucket",
+    :access_key_id => "AKIAJHTDANPCGOYXD2GA",
+    :secret_access_key => "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"
+  }
+}
 end
